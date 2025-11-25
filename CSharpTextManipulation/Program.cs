@@ -54,6 +54,7 @@
                     zad3occurences++;
                 }
             }
+            Console.WriteLine("");
             Console.WriteLine($"Litera {zad3letter} występuje w {zad3} {zad3occurences} razy");
         }
     }
