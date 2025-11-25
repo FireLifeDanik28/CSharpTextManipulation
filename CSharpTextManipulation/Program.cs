@@ -43,6 +43,18 @@
             Console.WriteLine(zad2.Substring(zad2.Length - 1, 1));
             //zad 3
             //Zadanie 3: Liczenie wystąpień znaku
+            Console.WriteLine("Proszę wpisać dowolny tekst");
+            string zad3 = Console.ReadLine().ToString();
+            Console.WriteLine("Proszę wpisać dowolną litere do wyszukiwania");
+            char zad3letter = Console.ReadKey().KeyChar;
+            int zad3occurences = 0;
+            for (int i = 0; i < zad3.Length; i++) {
+                if (zad3letter == zad3[i])
+                {
+                    zad3occurences++;
+                }
+            }
+            Console.WriteLine($"Litera {zad3letter} występuje w {zad3} {zad3occurences} razy");
         }
     }
 }
