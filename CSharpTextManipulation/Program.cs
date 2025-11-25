@@ -35,8 +35,13 @@
             }
             //zad 2
             //Długość tekstu i pierwsza/ostatnia litera
-
-
+            Console.WriteLine("Proszę wpisać dowolny tekst");
+            string zad2 = Console.ReadLine().ToString();
+            Console.WriteLine(zad2.Trim());
+            Console.WriteLine(zad2.Length);
+            Console.WriteLine(zad2.Substring(0,1));
+            Console.WriteLine(zad2.Substring(zad2.Length - 1, 1));
+            
         }
     }
 }
