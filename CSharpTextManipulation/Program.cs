@@ -36,12 +36,13 @@
             //zad 2
             //Długość tekstu i pierwsza/ostatnia litera
             Console.WriteLine("Proszę wpisać dowolny tekst");
-            string zad2 = Console.ReadLine().ToString();
-            Console.WriteLine(zad2.Trim());
+            string zad2 = Console.ReadLine().ToString().Trim();
+            Console.WriteLine(zad2);
             Console.WriteLine(zad2.Length);
             Console.WriteLine(zad2.Substring(0,1));
             Console.WriteLine(zad2.Substring(zad2.Length - 1, 1));
-            
+            //zad 3
+            //Zadanie 3: Liczenie wystąpień znaku
         }
     }
 }
