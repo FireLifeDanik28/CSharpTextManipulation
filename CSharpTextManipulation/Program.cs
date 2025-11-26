@@ -56,6 +56,19 @@
             }
             Console.WriteLine("");
             Console.WriteLine($"Litera {zad3letter} występuje w {zad3} {zad3occurences} razy");
+            //zad 4
+            //Zamiana spacji na podkreślniki
+            Console.WriteLine("Proszę wpisać zdanie");
+            string zad4 = Console.ReadLine().ToString();
+            //zad 4.2
+            Console.WriteLine("Proszę wpisać stary znak do zamiany");
+            string zad4oldchar = Console.ReadLine().ToString();
+            //zad 4.1
+            Console.WriteLine("Proszę wpisać nowy znak do zamiany");
+            string zad4newchar = Console.ReadLine().ToString();
+            zad4 = zad4.Replace(zad4oldchar, zad4newchar);
+            Console.WriteLine(zad4);
+            
         }
     }
 }
