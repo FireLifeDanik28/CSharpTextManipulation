@@ -68,7 +68,14 @@
             string zad4newchar = Console.ReadLine().ToString();
             zad4 = zad4.Replace(zad4oldchar, zad4newchar);
             Console.WriteLine(zad4);
-            
+            //zad 5
+            Console.WriteLine("Proszę wpisać dowolny tekst");
+            string zad5 = Console.ReadLine().ToString();
+            string zad5mod;
+            for (int i = 0; i < zad5.Length; i++)
+            {
+                //zad5[i] = zad5mod[i];
+            }
         }
     }
 }
