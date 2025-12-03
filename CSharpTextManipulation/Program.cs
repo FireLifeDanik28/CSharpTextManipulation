@@ -82,7 +82,28 @@ namespace CSharpTextManipulation
             Console.WriteLine(revZad5);
             //zad 6
             //czy to palindrom?
+            //literalnie ABSOLUtNiE TO SAMO co było w repo Csharp w 11 zadaniu LMFAO.
+            Console.WriteLine("Proszę wpisać dowolny tekst, lub palindrom");
+            string zad6 = Console.ReadLine().ToString();
+            int halfZad6Length = zad6.Length / 2;
+            bool isPalindrome = true;
 
+            for (int i = 0; i < halfZad6Length; i++)
+            {
+                if (zad6[i] != zad6[zad6.Length - 1 - i])
+                {
+                    isPalindrome = false;
+                    break;
+                }
+            }
+            if (isPalindrome == false)
+            {
+                Console.WriteLine("Nie jest palindromem");
+            }
+            else
+            {
+                Console.WriteLine("Jest palindromem");
+            }
         }
     }
 }
