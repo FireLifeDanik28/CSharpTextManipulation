@@ -111,7 +111,17 @@ namespace CSharpTextManipulation
             string zad7 = Console.ReadLine().ToString().Trim();
             string[] words = zad7.Split(' ');
             Console.WriteLine($"Ilość słów: {words.Length}");
-
+            //zad 8
+            //Generator akronimów
+            Console.WriteLine("Proszę wpisać dowolny tekst");
+            string zad8 = Console.ReadLine().ToString().Trim();
+            string[] wordsZad8 = zad8.Split(' ');
+            string zad8Res = String.Empty;
+            for (int i = 0; i < wordsZad8.Length; i++)
+            {
+                zad8Res = zad8Res + wordsZad8[i][0];
+            }
+            Console.WriteLine(zad8Res);
         }
     }
 }
