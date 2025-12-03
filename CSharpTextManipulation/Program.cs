@@ -106,7 +106,12 @@ namespace CSharpTextManipulation
                 Console.WriteLine("Jest palindromem");
             }
             //zad 7
-            //
+            //Licznik słów
+            Console.WriteLine("Proszę wpisać dowolny tekst");
+            string zad7 = Console.ReadLine().ToString().Trim();
+            string[] words = zad7.Split(' ');
+            Console.WriteLine($"Ilość słów: {words.Length}");
+
         }
     }
 }
