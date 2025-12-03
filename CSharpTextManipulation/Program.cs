@@ -1,4 +1,6 @@
-﻿namespace CSharpTextManipulation
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace CSharpTextManipulation
 {
     internal class Program
     {
@@ -71,11 +73,16 @@
             //zad 5
             Console.WriteLine("Proszę wpisać dowolny tekst");
             string zad5 = Console.ReadLine().ToString();
-            string zad5mod;
+            char[] cArray = zad5.ToCharArray();
+            string revZad5 = String.Empty;
             for (int i = 0; i < zad5.Length; i++)
             {
-                //zad5[i] = zad5mod[i];
+                revZad5 = revZad5 + cArray[zad5.Length - 1 - i];
             }
+            Console.WriteLine(revZad5);
+            //zad 6
+            //czy to palindrom?
+
         }
     }
 }
