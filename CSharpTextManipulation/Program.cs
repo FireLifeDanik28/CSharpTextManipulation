@@ -126,13 +126,38 @@ namespace CSharpTextManipulation
             //Wyciąganie domeny z e-maila
             Console.WriteLine("Proszę wpisać email");
             string zad9 = Console.ReadLine().ToString().Trim();
-            for (int i = 0; i < zad9.Length-1; i++)
+            for (int i = 0; i < zad9.Length; i++)
             {
                 if (i == zad9.IndexOf("@"))
                 {
-                    Console.WriteLine(zad9.Substring(i));
+                    Console.WriteLine(zad9.Substring(i+1));
                 }
             }
+            //zad 10
+            Console.WriteLine("Proszę wpisać zdanie");
+            string zad10 = Console.ReadLine().ToString().Trim();
+            Console.WriteLine("Proszę wpisać słowa zakazane");
+            string zad10SwearTableInput = Console.ReadLine().ToString().ToLower();
+            string[] zad10SwearTable = zad10SwearTableInput.Split(' ');
+            string[] zad10Table = zad10.Split(' ');
+            string EndString = string.Empty;
+            for (int i = 0; i < zad10Table.Length; i++)
+            {
+                for (int j = 0; j < zad10SwearTable.Length; j++)
+                {
+                    if (zad10Table[i] == zad10SwearTable[j])
+                    {
+                        string StarAmount = string.Empty;
+                        for (int c = 0; c < zad10Table[i].Length; c++)
+                        {
+                            StarAmount = StarAmount + "*";
+                        }
+                        zad10Table[i] = zad10Table[i].Replace(zad10Table[i], StarAmount);
+                    }
+                }
+            }
+            EndString = string.Join(" ", zad10Table);
+            Console.WriteLine(EndString);
             
         }
     }
