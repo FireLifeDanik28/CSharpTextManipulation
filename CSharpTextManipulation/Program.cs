@@ -158,7 +158,27 @@ namespace CSharpTextManipulation
             }
             EndString = string.Join(" ", zad10Table);
             Console.WriteLine(EndString);
-            
+            //zad 11
+            /*
+            Console.WriteLine("Proszę wpisać zdanie z cyframi");
+            string zad11 = Console.ReadLine().ToString().Trim();
+            string zad11SwearTableInput = "1 2 3 4 5 6 7 8 9 0";
+            string[] zad11SwearTable = zad11SwearTableInput.Split(' ');
+            string[] zad11Table = zad11.Split(' ');
+            string EndString11 = string.Empty;
+            for (int i = 0; i < zad11Table.Length; i++)
+            {
+                for (int j = 0; j < zad11SwearTable.Length; j++)
+                {
+                    if (zad11Table[i] == zad11SwearTable[j])
+                    {
+                        
+                        zad11Table[i] = zad11Table[i].Replace(zad11Table[i], );
+                    }
+                }
+            }
+            EndString11 = string.Join(" ", zad11Table);
+            Console.WriteLine(EndString11);*/
         }
     }
 }
