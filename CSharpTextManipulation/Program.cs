@@ -122,6 +122,18 @@ namespace CSharpTextManipulation
                 zad8Res = zad8Res + wordsZad8[i][0];
             }
             Console.WriteLine(zad8Res);
+            //zad 9
+            //Wyciąganie domeny z e-maila
+            Console.WriteLine("Proszę wpisać email");
+            string zad9 = Console.ReadLine().ToString().Trim();
+            for (int i = 0; i < zad9.Length-1; i++)
+            {
+                if (i == zad9.IndexOf("@"))
+                {
+                    Console.WriteLine(zad9.Substring(i));
+                }
+            }
+            
         }
     }
 }
