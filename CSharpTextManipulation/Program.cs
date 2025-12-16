@@ -228,9 +228,11 @@ namespace CSharpTextManipulation
         //zad 13
         Console.WriteLine("Proszę wpisać imie i nazwisko (2 slowa tylko)");
         string zad13 = Console.ReadLine().ToString().Trim();
-        string[] zad13Table = zad13.Split(' ');
-        zad13Table[0].ToUpper().Substring(1).ToLower();
-        zad13Table[1].ToUpper().Substring(1).ToLower();
+        string[] zad13Table = zad13.ToUpper().Split(' ');
+        char[] zad131 = zad13Table[0].ToCharArray();
+        char[] zad132 = zad13Table[1].ToCharArray();
+        zad13Table[0] = zad131[0] + zad13Table[0].Substring(1).ToLower();
+        zad13Table[1] = zad132[0] + zad13Table[1].Substring(1).ToLower();
         Console.WriteLine(zad13Table[0] + " " + zad13Table[1]);
         }
     }
