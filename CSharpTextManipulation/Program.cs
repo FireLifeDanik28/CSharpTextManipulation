@@ -8,6 +8,7 @@ namespace CSharpTextManipulation
         {
             //zadanie 1
             //Zamiana wielkości liter
+            
             Console.WriteLine("Proszę wpisać zdanie");
             string zad1 = Console.ReadLine().ToString();
             Console.WriteLine(zad1.Length);
@@ -158,27 +159,60 @@ namespace CSharpTextManipulation
             }
             EndString = string.Join(" ", zad10Table);
             Console.WriteLine(EndString);
+            
             //zad 11
-            /*
+            
             Console.WriteLine("Proszę wpisać zdanie z cyframi");
             string zad11 = Console.ReadLine().ToString().Trim();
             string zad11SwearTableInput = "1 2 3 4 5 6 7 8 9 0";
             string[] zad11SwearTable = zad11SwearTableInput.Split(' ');
             string[] zad11Table = zad11.Split(' ');
-            string EndString11 = string.Empty;
             for (int i = 0; i < zad11Table.Length; i++)
             {
                 for (int j = 0; j < zad11SwearTable.Length; j++)
                 {
                     if (zad11Table[i] == zad11SwearTable[j])
                     {
-                        
-                        zad11Table[i] = zad11Table[i].Replace(zad11Table[i], );
+                        string ReplaceWith = string.Empty;
+                        switch(zad11Table[i])
+                        {
+                            case "1":
+                                ReplaceWith = "jeden";
+                            break;
+                            case "2":
+                                ReplaceWith = "dwa";
+                            break;
+                            case "3":
+                                ReplaceWith = "trzy";
+                            break;
+                            case "4":
+                                ReplaceWith = "czteru";
+                            break;
+                            case "5":
+                                ReplaceWith = "piec";
+                            break;
+                            case "6":
+                                ReplaceWith = "szesc";
+                            break;
+                            case "7":
+                                ReplaceWith = "siedem";
+                            break;
+                            case "8":
+                                ReplaceWith = "osiem";
+                            break;
+                            case "9":
+                                ReplaceWith = "dziewiec";
+                            break;
+                            case "0":
+                                ReplaceWith = "zero";
+                            break;
+                        }
+                        zad11Table[i] = zad11Table[i].Replace(zad11Table[i], ReplaceWith);
                     }
                 }
             }
-            EndString11 = string.Join(" ", zad11Table);
-            Console.WriteLine(EndString11);*/
+            string EndString2 = string.Join(" ", zad11Table);
+            Console.WriteLine(EndString2);
         }
     }
 }
