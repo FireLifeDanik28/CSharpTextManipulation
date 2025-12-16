@@ -120,6 +120,7 @@ namespace CSharpTextManipulation
             string zad8Res = String.Empty;
             for (int i = 0; i < wordsZad8.Length; i++)
             {
+                if (wordsZad8[i] != "of")
                 zad8Res = zad8Res + wordsZad8[i][0];
             }
             Console.WriteLine(zad8Res);
@@ -211,12 +212,12 @@ namespace CSharpTextManipulation
                     }
                 }
             }
-        string EndString2 = string.Join(" ", zad11Table);
-        Console.WriteLine(EndString2);
-        //zad 12
-        string ObamaIpsum = "If there's a senior citizen somewhere who can't pay for their prescription drugs, and has to choose between medicine and the rent, that makes my life poorer, even if it's not my grandparent. Not once in my conversations with him have I heard him talk about any ethnic group in derogatory terms, or treat whites with whom he interacted with anything but courtesy and respect. I reject the view of some in the West that a woman who chooses to cover her hair is somehow less equal, but I do believe that a woman who is denied an education is denied equality. \n\n God bless you.";
-        Console.WriteLine("Proszę wpisać zdanie");
-        string zad12 = Console.ReadLine().ToString().Trim();
+            string EndString2 = string.Join(" ", zad11Table);
+            Console.WriteLine(EndString2);
+            //zad 12
+            string ObamaIpsum = "If there's a senior citizen somewhere who can't pay for their prescription drugs, and has to choose between medicine and the rent, that makes my life poorer, even if it's not my grandparent. Not once in my conversations with him have I heard him talk about any ethnic group in derogatory terms, or treat whites with whom he interacted with anything but courtesy and respect. I reject the view of some in the West that a woman who chooses to cover her hair is somehow less equal, but I do believe that a woman who is denied an education is denied equality. \n\n God bless you.";
+            Console.WriteLine("Proszę wpisać zdanie");
+            string zad12 = Console.ReadLine().ToString().Trim();
             if (ObamaIpsum.Contains(zad12))
             {
                 int index12 = ObamaIpsum.IndexOf(zad12);
@@ -225,15 +226,24 @@ namespace CSharpTextManipulation
             else {
                 Console.WriteLine("404 Not found");
             }
-        //zad 13
-        Console.WriteLine("Proszę wpisać imie i nazwisko (2 slowa tylko)");
-        string zad13 = Console.ReadLine().ToString().Trim();
-        string[] zad13Table = zad13.ToUpper().Split(' ');
-        char[] zad131 = zad13Table[0].ToCharArray();
-        char[] zad132 = zad13Table[1].ToCharArray();
-        zad13Table[0] = zad131[0] + zad13Table[0].Substring(1).ToLower();
-        zad13Table[1] = zad132[0] + zad13Table[1].Substring(1).ToLower();
-        Console.WriteLine(zad13Table[0] + " " + zad13Table[1]);
+            //zad 13
+            Console.WriteLine("Proszę wpisać imie i nazwisko (2 slowa tylko)");
+            string zad13 = Console.ReadLine().ToString().Trim();
+            string[] zad13Table = zad13.ToUpper().Split(' ');
+            char[] zad131 = zad13Table[0].ToCharArray();
+            char[] zad132 = zad13Table[1].ToCharArray();
+            zad13Table[0] = zad131[0] + zad13Table[0].Substring(1).ToLower();
+            zad13Table[1] = zad132[0] + zad13Table[1].Substring(1).ToLower();
+            Console.WriteLine(zad13Table[0] + " " + zad13Table[1]);
+            //zad 14
+            Console.WriteLine("Proszę wpisać imie i nazwisko (2 slowa tylko)");
+            string zad14 = Console.ReadLine().ToString().Trim();
+            for (int i = 0; i < zad14.Length; i++) {
+                if (i % 2 == 0)
+                {
+                    
+                }
+            }
         }
     }
 }
