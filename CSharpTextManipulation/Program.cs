@@ -187,7 +187,7 @@ namespace CSharpTextManipulation
                                 ReplaceWith = "trzy";
                                 break;
                             case "4":
-                                ReplaceWith = "czteru";
+                                ReplaceWith = "cztery";
                                 break;
                             case "5":
                                 ReplaceWith = "piec";
@@ -306,6 +306,8 @@ namespace CSharpTextManipulation
             }
             Console.WriteLine("Liczba samogłosek: " + samogloski);
             Console.WriteLine("Liczba spółgłosek: " + spolgloski);
+
+            //zad 18
         }
     }
 }
