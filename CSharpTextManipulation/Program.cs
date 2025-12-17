@@ -306,8 +306,28 @@ namespace CSharpTextManipulation
             }
             Console.WriteLine("Liczba samogłosek: " + samogloski);
             Console.WriteLine("Liczba spółgłosek: " + spolgloski);
-
+            
             //zad 18
+            Console.WriteLine("Proszę wpisać zdanie");
+            string zad18 = Console.ReadLine().ToString().Trim();
+            Console.WriteLine("Proszę wpisać kod");
+            string zad18CodeInput = Console.ReadLine().ToString().Trim();
+            int Code = int.Parse(zad18CodeInput);
+            string encrypted = string.Empty;
+            foreach (char n in zad18)
+            {
+                if (char.IsLetter(n))
+                {
+                    char offset = char.IsUpper(n) ? 'A' : 'a';
+                    char shifted = (char)(((n - offset + Code) % 26) + offset);
+                    encrypted += shifted;
+                }
+                else
+                {
+                    encrypted += n;
+                }
+            }
+            Console.WriteLine(encrypted);
         }
     }
 }
