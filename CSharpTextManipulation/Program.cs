@@ -42,7 +42,7 @@ namespace CSharpTextManipulation
             string zad2 = Console.ReadLine().ToString().Trim();
             Console.WriteLine(zad2);
             Console.WriteLine(zad2.Length);
-            Console.WriteLine(zad2.Substring(0,1));
+            Console.WriteLine(zad2.Substring(0, 1));
             Console.WriteLine(zad2.Substring(zad2.Length - 1, 1));
             //zad 3
             //Zadanie 3: Liczenie wystąpień znaku
@@ -121,7 +121,7 @@ namespace CSharpTextManipulation
             for (int i = 0; i < wordsZad8.Length; i++)
             {
                 if (wordsZad8[i] != "of")
-                zad8Res = zad8Res + wordsZad8[i][0];
+                    zad8Res = zad8Res + wordsZad8[i][0];
             }
             Console.WriteLine(zad8Res);
             //zad 9
@@ -132,7 +132,7 @@ namespace CSharpTextManipulation
             {
                 if (i == zad9.IndexOf("@"))
                 {
-                    Console.WriteLine(zad9.Substring(i+1));
+                    Console.WriteLine(zad9.Substring(i + 1));
                 }
             }
             //zad 10
@@ -160,9 +160,9 @@ namespace CSharpTextManipulation
             }
             EndString = string.Join(" ", zad10Table);
             Console.WriteLine(EndString);
-            
+
             //zad 11
-            
+
             Console.WriteLine("Proszę wpisać zdanie z cyframi");
             string zad11 = Console.ReadLine().ToString().Trim();
             string zad11SwearTableInput = "1 2 3 4 5 6 7 8 9 0";
@@ -175,38 +175,38 @@ namespace CSharpTextManipulation
                     if (zad11Table[i] == zad11SwearTable[j])
                     {
                         string ReplaceWith = string.Empty;
-                        switch(zad11Table[i])
+                        switch (zad11Table[i])
                         {
                             case "1":
                                 ReplaceWith = "jeden";
-                            break;
+                                break;
                             case "2":
                                 ReplaceWith = "dwa";
-                            break;
+                                break;
                             case "3":
                                 ReplaceWith = "trzy";
-                            break;
+                                break;
                             case "4":
                                 ReplaceWith = "czteru";
-                            break;
+                                break;
                             case "5":
                                 ReplaceWith = "piec";
-                            break;
+                                break;
                             case "6":
                                 ReplaceWith = "szesc";
-                            break;
+                                break;
                             case "7":
                                 ReplaceWith = "siedem";
-                            break;
+                                break;
                             case "8":
                                 ReplaceWith = "osiem";
-                            break;
+                                break;
                             case "9":
                                 ReplaceWith = "dziewiec";
-                            break;
+                                break;
                             case "0":
                                 ReplaceWith = "zero";
-                            break;
+                                break;
                         }
                         zad11Table[i] = zad11Table[i].Replace(zad11Table[i], ReplaceWith);
                     }
@@ -235,7 +235,7 @@ namespace CSharpTextManipulation
             zad13Table[0] = zad131[0] + zad13Table[0].Substring(1).ToLower();
             zad13Table[1] = zad132[0] + zad13Table[1].Substring(1).ToLower();
             Console.WriteLine(zad13Table[0] + " " + zad13Table[1]);
-            
+
             //zad 14
             Console.WriteLine("Proszę wpisać zdanie");
             string zad14 = Console.ReadLine().ToString().Trim();
@@ -251,7 +251,7 @@ namespace CSharpTextManipulation
                 }
             }
             Console.WriteLine(empty14);
-            
+
             //zad 15
             Console.WriteLine("Proszę wpisać zdanie");
             string zad15 = Console.ReadLine().ToString().Trim();
@@ -259,9 +259,53 @@ namespace CSharpTextManipulation
             string[] zad15EmptyTable = new string[zad15Table.Length];
             for (int i = 0; i < zad15Table.Length; i++)
             {
-                zad15EmptyTable[i] = zad15Table[zad15Table.Length-i-1];
+                zad15EmptyTable[i] = zad15Table[zad15Table.Length - i - 1];
             }
             Console.WriteLine(String.Join(" ", zad15EmptyTable));
+
+            //zad 16
+            Console.WriteLine("Proszę wpisać zdanie np. Anna,Nowak,31");
+            while (true)
+            {
+                string zad16 = Console.ReadLine().ToString().Trim();
+                string[] zad16Table = zad16.Split(',');
+                if (zad16Table.Length == 3)
+                {
+                    Console.WriteLine("Imię: " + zad16Table[0]);
+                    Console.WriteLine("Nazwisko: " + zad16Table[1]);
+                    Console.WriteLine("Wiek: " + zad16Table[2]);
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Błąd, możesz tylko wpisać imie,nazwisko,wiek");
+                }
+            }
+            
+            //zad 17
+            Console.WriteLine("Proszę wpisać zdanie");
+            string zad17 = Console.ReadLine().ToString().Trim();
+            char[] zad17CharTable = zad17.ToLower().ToCharArray();
+            string ae = "aeiouy";
+            char[] aeTable = ae.ToCharArray();
+            int spolgloski = 0;
+            int samogloski = 0;
+            for (int i = 0; i < zad17.Length; i++)
+            {
+                if (char.IsLetter(zad17CharTable[i]))
+                {
+                    if (zad17CharTable[i] == aeTable[0] || zad17CharTable[i] == aeTable[1] || zad17CharTable[i] == aeTable[2] || zad17CharTable[i] == aeTable[3] || zad17CharTable[i] == aeTable[4] || zad17CharTable[i] == aeTable[5])
+                    {
+                        samogloski++;
+                    }
+                    else
+                    {
+                        spolgloski++;
+                    }
+                }
+            }
+            Console.WriteLine("Liczba samogłosek: " + samogloski);
+            Console.WriteLine("Liczba spółgłosek: " + spolgloski);
         }
     }
 }
