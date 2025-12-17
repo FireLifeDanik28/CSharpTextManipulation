@@ -235,15 +235,22 @@ namespace CSharpTextManipulation
             zad13Table[0] = zad131[0] + zad13Table[0].Substring(1).ToLower();
             zad13Table[1] = zad132[0] + zad13Table[1].Substring(1).ToLower();
             Console.WriteLine(zad13Table[0] + " " + zad13Table[1]);
+            
             //zad 14
-            Console.WriteLine("Proszę wpisać imie i nazwisko (2 slowa tylko)");
+            Console.WriteLine("Proszę wpisać zdanie");
             string zad14 = Console.ReadLine().ToString().Trim();
+            string empty14 = string.Empty;
             for (int i = 0; i < zad14.Length; i++) {
                 if (i % 2 == 0)
                 {
-                    
+                    empty14 = empty14 + Char.ToLower(zad14[i]);
+                }
+                else
+                {
+                    empty14 = empty14 + Char.ToUpper(zad14[i]);
                 }
             }
+            Console.WriteLine(empty14);
         }
     }
 }
