@@ -251,6 +251,17 @@ namespace CSharpTextManipulation
                 }
             }
             Console.WriteLine(empty14);
+            
+            //zad 15
+            Console.WriteLine("Proszę wpisać zdanie");
+            string zad15 = Console.ReadLine().ToString().Trim();
+            string[] zad15Table = zad15.Split(' ');
+            string[] zad15EmptyTable = new string[zad15Table.Length];
+            for (int i = 0; i < zad15Table.Length; i++)
+            {
+                zad15EmptyTable[i] = zad15Table[zad15Table.Length-i-1];
+            }
+            Console.WriteLine(String.Join(" ", zad15EmptyTable));
         }
     }
 }
